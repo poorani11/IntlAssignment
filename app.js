@@ -70,13 +70,18 @@ itunesApp.service('artistService', ['$resource', '$q', function ($resource, $q) 
 //CONTROLLERS
 itunesApp.controller('homeController', ['$scope', 'artistService', function ($scope, artistService) {
     $scope.gotData = false;
+    $scope.submitted = false;
     $scope.artistData = {};
 
     $scope.getArtistData = function () {
+        $scope.submitted = true;
         artistService.getApi($scope.artistName, $scope.limit)
             .then(function (result) {
                 var artistData = artistService.getArtistData();
                 $scope.artistData = artistData.results;
+                $('#addArtist').modal('hide');
+                $scope.artistName = '';
+                $scope.limit = '';
                 $scope.gotData = true;
 
             })
