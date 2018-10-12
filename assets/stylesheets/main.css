@@ -39,6 +39,11 @@ md-tabs md-ink-bar {
 .container {
     margin-top: 50px;
 }
+.dummy-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 .tab-container {
     border: 1px solid #DCDCDC;

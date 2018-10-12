@@ -18,7 +18,9 @@
     </nav>
 </header>
 <div ng-if="!gotData">
-    <h1>No Data Available</h1>
+    <div class="container dummy-container">
+        <h3>No Artist Data Available. Please Click on the Search button above.</h3>
+    </div>
 </div>
 <div class="container tab-container" ng-if="gotData">
     <md-tabs md-selected="selectedIndex" md-dynamic-height="true">
@@ -59,7 +61,6 @@
                         <div class="form-group">
                             <label for="exampleInputArtist">Artist Name:</label>
                             <input type="text" class="form-control" id="exampleInputArtist" aria-describedby="artistHelp" placeholder="Enter Artist Name" ng-model="artistName">
-                            <small id="artistHelp" class="form-text text-muted" ng-show="(form.text.$dirty || submitted) && form.text.$error.required">Type the artist you want to search</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputLimit">Limit:</label>
