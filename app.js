@@ -20,7 +20,7 @@ itunesApp.service('artistService', ['$resource', '$q', function ($resource, $q) 
 
         return $q(function (resolve, reject) {
 
-            var resObj = $resource("http://itunes.apple.com/search");
+            var resObj = $resource("https://itunes.apple.com/search");
             var resp = resObj.get({
                 term: artistName,
                 limit: limit
@@ -45,7 +45,7 @@ itunesApp.service('artistService', ['$resource', '$q', function ($resource, $q) 
 
         return $q(function (resolve, reject) {
 
-            var resObj = $resource("http://itunes.apple.com/search");
+            var resObj = $resource("https://itunes.apple.com/search");
             var resp = resObj.get({
                 term: artistName,
                 limit: 1
