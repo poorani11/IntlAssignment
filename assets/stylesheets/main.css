@@ -1,6 +1,6 @@
 /*
   ========================================
-  Custom Styles
+  Custom Reset
   ========================================
 */
 
@@ -10,20 +10,64 @@
     box-sizing: border-box;
 }
 
+/*
+  ========================================
+  Tab Header
+  ========================================
+*/
 
-.tabsdemoDynamicHeight md-content {
-    background-color: transparent !important;
+md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active,
+md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active md-icon,
+md-tabs.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active md-icon,
+md-tabs.md-default-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused,
+md-tabs.md-default-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused md-icon {
+    color: #18BC9C !important;
 }
 
-.tabsdemoDynamicHeight md-content md-tabs {
-    background: #f6f6f6;
-    border: 1px solid #e1e1e1;
+md-tabs md-ink-bar {
+    background-color: #2d3e50;
+    color: #2d3e50;
 }
 
-.tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
-    background: white;
+
+/*
+  ========================================
+  Tab container
+  ========================================
+*/
+
+.container {
+    margin-top: 50px;
 }
 
-.tabsdemoDynamicHeight md-content h1:first-child {
-    margin-top: 0;
+.tab-container {
+    border: 1px solid #DCDCDC;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.data-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-description {
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-element {
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 1.5em;
+    font-size: 14px;
+}
+
+b {
+    letter-spacing: 1px;
 }
