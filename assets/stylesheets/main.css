@@ -76,3 +76,8 @@ md-tabs md-ink-bar {
 b {
     letter-spacing: 1px;
 }
+
+.error {
+  color: red;
+  font-size: 0.8em;
+}

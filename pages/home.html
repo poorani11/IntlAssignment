@@ -60,12 +60,16 @@
                     <fieldset>
                         <div class="form-group">
                             <label for="exampleInputArtist">Artist Name:</label>
-                            <input type="text" class="form-control" id="exampleInputArtist" aria-describedby="artistHelp" placeholder="Enter Artist Name" ng-model="artistName">
+                            <input type="text" class="form-control" id="exampleInputArtist" aria-describedby="artistHelp" placeholder="Enter Artist Name" ng-model="artistName" required ng-class="{'is-invalid': artistName !== 'jack'}">
+                            <div class="invalid-feedback" ng-if="artistName !=='jack'">Sorry, try 'jack' as a name</div>
+                            <div class="valid-feedback" ng-if="artistName === 'jack'">Success! You've done it.</div>
+
                         </div>
                         <div class="form-group">
                             <label for="exampleInputLimit">Limit:</label>
-                            <input type="number" class="form-control" id="exampleInputLimit" aria-describedby="limitHelp" placeholder="Enter Limit" ng-model="limit" required>
-                            <small id="artistHelp" class="form-text text-muted" ng-show="(form.number.$dirty || submitted) && form.number.$error.required">Type the artist you want to search</small>
+                            <input type="number" class="form-control" id="exampleInputLimit" aria-describedby="limitHelp" placeholder="Enter Limit" ng-model="limit" required ng-class="{'is-invalid': limit !== 4}">
+                            <div class="invalid-feedback" ng-if="limit !==4">Sorry, try 4 instead</div>
+                            <div class="valid-feedback" ng-if="limit === 4">Success! You've done it.</div>
                         </div>
                     </fieldset>
                 </form>
